@@ -1,0 +1,3 @@
+.mx-progress-wrap{ display:inline-flex; }
+.mx-progress{ display:inline-block; } /* position се задава inline в JS */
+.mx-bar{ } /* stroke идва от SVG градиента */

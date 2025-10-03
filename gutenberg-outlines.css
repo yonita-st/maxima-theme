@@ -1,0 +1,28 @@
+/* Тънък контур около всеки блок В РЕДАКТОРА */
+.editor-styles-wrapper .wp-block {
+  outline: 1px dashed #cfd4d9;
+  outline-offset: -1px;
+}
+
+/* По-ясно при hover/selection */
+.editor-styles-wrapper .wp-block:hover,
+.editor-styles-wrapper .wp-block.is-selected,
+.editor-styles-wrapper .wp-block.has-child-selected {
+  outline: 1px solid #8c8f94;
+}
+
+/* Columns блокът и вътрешните колони */
+.editor-styles-wrapper .wp-block-columns { outline: 1px solid #bdbdbd; }
+.editor-styles-wrapper .wp-block-column  { outline: 1px dotted #bdbdbd; }
+
+/* По-лек контур за вложени блокове */
+.editor-styles-wrapper .wp-block .wp-block { outline-color: #e6e6e6; }
+
+/* Без рамка на плюса/апендерите */
+.editor-styles-wrapper .block-editor-default-block-appender,
+.editor-styles-wrapper .block-editor-button-block-appender,
+.editor-styles-wrapper .block-list-appender {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
