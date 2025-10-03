@@ -1,4 +1,11 @@
 <?php
+/**
+ * Template Name: Public Shell
+ * Description: Шаблон за публични (нерегистрирани) страници
+ */
+?>
+
+<?php
 /*
 Template Name: Maxima Public Shell
 Description: Публичен shell (Login / Register / Lost password) – прозрачен хедър/футър, центрирани музикални контроли (60px), glass карта. Работи с всякакво съдържание/шорткъти от PMPro.

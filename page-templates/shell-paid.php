@@ -1,4 +1,11 @@
 ﻿<?php
+/**
+ * Template Name: Paid Shell
+ * Description: Шаблон за платени (регистрирани) страници
+ */
+?>
+
+<?php
 /*
 Template Name: Maxima Paid Shell
 Description: Обвивка за платено съдържание (PMPro) – фон от meta/featured, хедър с лого/звук/потребител, 3 „папки“, двустепенни менюта, glass съдържание и унифициран футър.
