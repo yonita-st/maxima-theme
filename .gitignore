@@ -1,0 +1,19 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node / build артефакти (ако решим да ползваме)
+node_modules/
+dist/
+*.map
+
+# Архиви и временни
+*.zip
+*.log
+*.tmp
+*.bak
+
+# Прочие
+.sass-cache/
