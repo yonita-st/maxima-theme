@@ -1,4 +1,110 @@
-body {
-    background-color: #ffeedd !important;
+/* == PUBLIC SHELL (само за публичните страници) =============== */
+
+/* ФОН (featured image + overlay) */
+#mx-bg{
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
   }
+  #mx-bg .mx-bg__overlay{
+    position: absolute;
+    inset: 0;
+    background: var(--mx-bg-overlay);
+    backdrop-filter: blur(2px);
+  }
+  
+  /* ПРОЗРАЧЕН ХЕДЪР / НАВИГАЦИЯ */
+  .mx-nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background: transparent;
+    z-index: 50;
+  }
+  .mx-nav__brand{
+    display:flex; align-items:center; gap:10px;
+    color: var(--mx-text-invert); text-decoration: none;
+  }
+  .mx-nav__logo{ height:32px; width:auto; display:block; }
+  .mx-nav__title{ font-family: TYScript, ui-rounded, system-ui; font-size: 20px; }
+  .mx-nav__spacer{ flex:1; }
+  .mx-nav__actions{ display:flex; gap:10px; }
+  
+  /* АУДИО КОНТРОЛИ */
+  .bgm-wrap{
+    position: fixed;
+    top: 60px; right: 18px;
+    display:flex; align-items:center; gap:10px;
+    z-index: 60;
+    background: rgba(0,0,0,.35);
+    border: 1px solid rgba(255,255,255,.4);
+    padding: 8px 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    color:#fff;
+  }
+  
+  /* ON/OFF бутон */
+  .bgm-toggle{
+    appearance:none; border:0; cursor:pointer;
+    padding:6px 10px; border-radius:8px;
+    font-weight:600;
+    color:#fff; background: var(--mx-brand);
+    transition: transform .15s;
+  }
+  .bgm-toggle[aria-pressed="true"]{ background: var(--mx-brand-2); }
+  .bgm-toggle:active{ transform: scale(.97); }
+  .bgm-toggle__off{ display:none; }
+  .bgm-toggle[aria-pressed="true"] .bgm-toggle__on{ display:none; }
+  .bgm-toggle[aria-pressed="true"] .bgm-toggle__off{ display:inline; }
+  
+  /* Volume плъзгач */
+  .bgm-volume{ width: 160px; accent-color: var(--mx-brand-2); }
+  
+  /* „говорители“ (декор – по желание) */
+  .bgm-speaker{
+    width:8px; height:8px; border-radius:50%;
+    background:#fff2; border:1px solid #fff3;
+  }
+  .bgm-speaker--left{ box-shadow:-10px 0 0 #fff1; }
+  .bgm-speaker--right{ box-shadow:10px 0 0 #fff1; }
+  
+  /* ГЛАВНО СЪДЪРЖАНИЕ (glass карта) */
+  .mx-main{
+    min-height: calc(100dvh - 90px);
+    display:grid; place-items:center; padding: 40px 16px;
+  }
+  .mx-card{
+    width:min(720px, 92vw);
+    background: var(--mx-card-bg);
+    border: 1px solid var(--mx-card-border);
+    border-radius: 18px;
+    backdrop-filter: blur(var(--mx-glass-blur));
+    padding: 28px;
+    box-shadow: 0 20px 35px rgba(0,0,0,.15);
+  }
+  
+  /* ФУТЪР (прозрачен) */
+  .mx-footer{
+    padding: 24px 16px 40px;
+    color: var(--mx-text-invert);
+  }
+  .mx-footer__inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; max-width:1100px; margin-inline:auto;
+  }
+  .mx-footer__links a{
+    color: var(--mx-text-invert);
+    text-decoration: none;
+    opacity: .85;
+  }
+  .mx-footer__links a:hover{ opacity: 1; text-decoration: underline; }
+  
+  /* Специален клас за public shell, ако ти трябва да насочиш селектори */
+  body.shell-public .mx-card{ /* пример за таргетиране по body клас */ }
   

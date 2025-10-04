@@ -1,4 +1,41 @@
-body {
-    outline: 5px dashed purple !important;
-  }
-  
+/* == COMMON (зарежда се навсякъде) =========================== */
+
+/* Шрифт (ако искаш да ползваш TYScript за заглавия/лого) */
+@font-face {
+  font-family: "TYScript";
+  src: url("../fonts/TYScript-Rg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Базови променливи */
+:root{
+  --mx-bg-overlay: rgba(0,0,0,.35);
+  --mx-text: #0f172a;          /* slate-900 */
+  --mx-text-invert: #fff;
+  --mx-card-bg: rgba(255,255,255,.7);
+  --mx-card-border: rgba(255,255,255,.5);
+  --mx-glass-blur: 12px;
+  --mx-brand: #6d28d9;         /* violet-700 */
+  --mx-brand-2: #10b981;       /* emerald-500 */
+}
+
+/* Нормализиране/базови */
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  color:var(--mx-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility */
+.container{ width:min(1100px, 92vw); margin-inline:auto; }
+.hidden{ display:none !important; }
+
+/* Дребни анимации – изключваме за потребители с предпочитание за по-малко движения */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}
